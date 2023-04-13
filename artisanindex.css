@@ -1,0 +1,1134 @@
+/*--------------------------Common for all pages----------------------------------*/
+/*Normalization of body and whole page*/
+@font-face
+{
+    font-family:'Dancing Script';
+    src:url("fonts/Dancing_Script/DancingScript-Regular.ttf");
+}
+
+@font-face
+{
+    font-family:'Pontano Sans';
+    src:url("fonts/Pontano_Sans/PontanoSans-Regular.ttf");
+}
+
+body,html
+{
+    margin: 0;
+    height: 100%;  
+
+}
+
+*{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+p
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*Header for all pages not including index page*/
+.otherHeader
+{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 50px;
+}
+
+/*logo styling*/
+
+.logobox
+{
+    position: absolute;
+    width: 40%;
+    top: 3%;
+    left: 2%;
+            
+}
+
+.logo
+{
+    font-size: 80px;
+    color: #e6bd64;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 3%;
+    margin-left: 5%;
+    line-height: 30px;
+    
+}
+
+.tag
+{
+  
+    font-size: 30px;
+    
+}
+
+/*Styling of the navigation bar and its hover menu*/
+.click
+{
+    text-decoration: underline;
+    color: #9aba89;
+}
+
+.navbox
+{
+    position:absolute;
+    width: 530px;
+    top: 15px;
+    right: 40px;
+    z-index: 3;
+}
+
+
+.navbox ul
+{
+    list-style-type: none;
+    overflow: hidden;
+    margin-top: 2%;
+    margin-left: 3%;
+    padding: 0px;
+                
+}
+
+.navbox li
+{
+    float: left;
+   
+}
+
+.navbox a,.dropbtn
+{
+    display: block;
+    padding: 2px 10px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 24px;
+    color: grey;
+    font-family: 'Pontano Sans', sans-serif;
+    cursor: pointer;
+    transition: color 0.3s ease;
+   
+}
+
+/*Font color specific to index page's navigation bar*/
+.indexNav a
+{
+    color: white;
+}
+
+.dropdown-content
+{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    position: absolute;
+    min-width: 150px;
+    background-color: rgba(31,40,45,0.9);
+}
+
+.dropdown-content a
+{
+    color: #bcb9b7;
+    font-size: 23px;
+    text-align: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    transition: background-color 0.2s ease;
+    
+    
+}
+
+.navbox a:hover
+{
+    color: #9aba89;
+    
+}
+
+.dropdown:hover .dropdown-content
+{
+    opacity: 1;
+    visibility: visible;    
+}
+
+.dropdown:hover .dropbtn
+{
+    color: #9aba89;
+    
+}
+
+.dropdown-content a:hover
+{
+    background-color: #6d6d6d;
+}
+
+/*The menu for small screen*/
+.navboxSM
+{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    border-bottom: 0.1px solid #d6d5d3;
+    text-align: center;
+    background-color: white;
+    z-index:2;
+}
+
+.logoSM
+{
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    font-size: 50px;
+    color: #e6bd64;
+    font-family: 'Dancing Script', cursive;
+}
+
+#hamburger
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index:3;
+    
+}
+.bar1, .bar2, .bar3 
+{
+    width: 35px;
+    height: 5px;
+    background-color: gray;
+    margin: 6px 0;
+    transition: 0.2s;
+}
+
+/* Rotate first bar*/
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+} 
+
+/* Fade out the second bar*/
+.change .bar2 {
+    opacity: 0;
+} 
+
+/* Rotate last bar*/
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+} 
+
+
+#expandNav
+{
+    
+    position: fixed;
+    width: 100%;
+    top: 80px;
+    min-height: 200px;
+    border-bottom:  0.1px solid #d6d5d3;
+    background-color: white;
+    z-index: 2;
+}
+
+.off
+{
+    display: none;
+}
+
+.on
+{
+    display: block;
+}
+
+
+
+#expandNav ul
+{
+    padding: 0px 0px;
+}
+
+#expandNav li
+{
+    list-style-type: none;
+    padding: 5px 40px;
+}
+
+#expandNav a
+{
+    color: #9aba89;
+    font-size: 23px;
+    font-family: 'Pontano Sans', sans-serif;
+    margin: 0px 0px;
+    text-decoration: none;
+}
+
+.expandSubMenu a
+{
+    display: block;
+    padding: 1px 30px;
+}
+
+
+/*The menu when scrolling down*/
+
+#scrollBlock
+{
+    display: none;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    z-index: 2;
+}
+
+
+#fontSize .logo
+{
+    font-size:60px ;
+}
+
+/*Footer section*/
+
+footer
+{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #1e282d;
+    
+}
+
+footer p
+{
+    position: absolute;
+    left: 5px;
+    bottom: 1px;
+    color: #bcb9b7;
+}
+
+.socialMedia
+{
+    position: absolute;
+    display: inline-block;
+    width: 150px;
+    top: 30px;
+    right: 80px;
+}
+
+.icon
+{
+    width: 30px;
+    height: 30px;
+    margin: 0px 8px;
+}
+
+/*---------------------------------------------Index page's css------------------------------*/
+/*Index page's body and html styling*/
+.index
+{
+    background-color: antiquewhite;
+}
+
+/*Landing page's background and logo*/
+.cover
+{
+    background: url('images/background/backgroundimage.jpg') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: relative;         
+}
+
+
+/*Our Story section*/
+
+.ourStoryText
+{
+    max-width: 700px;
+    float: right;
+}
+
+.ourStoryImg
+{
+    max-width: 700px;
+    float: left;
+}
+
+.ourStoryImg img
+{
+    width: 100%;
+}
+
+/*Our Menu section*/
+
+.cover1
+{
+    background: url('images/ourproducts/ourproducts.JPG') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 100%;
+    
+}
+
+.ourProductsText
+{
+    max-width: 700px;
+    float: left;
+}
+
+.subCol2
+{
+    width: 50%;
+    float: left;
+    padding: 1% 1%;
+    overflow: hidden;
+    
+}
+
+/*Our Service*/
+
+.cover2
+{
+    background: url('images/ourservice/ourservice.JPG') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 100%;
+    
+}
+
+
+.ourServiceText
+{
+    max-width: 700px;
+    float: right;
+    
+}
+
+/*Our philosophy section*/
+
+.cover3
+{
+    background: url('images/ourphilosophy/ourphilosophy.jpg') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 100%;
+    
+}
+
+.ourPhilosophy
+{
+    padding: 3% 5%;
+}
+
+table
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+th,td
+{
+    font-family: 'Pontano Sans', sans-serif;
+    color:#31302f;
+    padding: 3px 4px;
+    width: 150px;
+}
+
+/*Slide section*/
+
+#slide img
+{
+    width: 100%;
+    height: 100%;
+    display: none;
+   
+    
+}
+
+#slide
+{
+    position: relative;
+    border-width: 0px 0px;
+    
+}
+
+.fade
+{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade
+{
+    from{opacity: 0.4}
+    to{opacity: 1}
+}
+
+.dotsBox
+{
+    position: absolute;
+    bottom: 10px;
+    max-width: 120px;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+    z-index: 2;
+    
+}
+
+.dot
+{
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: grey;
+    display: inline-block;
+    margin: 0px 3px;
+    transition: background-color 0.6s ease;
+}
+
+/*Common in sections*/
+.ourStoryText,.ourProductsText,.ourServiceText,.ourPhilosophy
+{
+    text-align: center;
+    
+}
+
+
+.titleText
+{
+    font-size: 50px;
+    color: #e6bd64;
+    font-family: 'Dancing Script', cursive;
+}
+
+.paraText
+{
+    font-size: 15px;
+    color: #31302f;
+    font-family: 'Pontano Sans', sans-serif;
+    
+}
+
+button
+{
+    color: #e6bd64;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid #e6bd64; 
+    padding: 6px 10px;
+    margin-top: 7%;
+    transition: color 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    
+}
+
+button:hover
+{
+    color: #b3892d;
+    border: 1px solid #b3892d;
+}
+
+.row
+{
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+
+
+.col1
+{
+    width: 25%;
+}
+
+.col2
+{
+    width: 50%;
+    float: left;
+    padding: 3% 5%;
+    overflow: hidden;
+}
+
+.col3
+{
+    width: 75%;
+}
+
+
+.col4
+{
+    width: 100%;
+}
+
+/*----------------------------------------Menu page's css----------------------------------------------*/
+.current
+{
+    text-decoration: underline;
+}
+
+.gallery
+{
+    clear: both;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.gallery>ul>li
+{
+    list-style-type: none;
+    display: inline;
+    margin-left: 1%;
+    margin-right: 1%;   
+}
+
+
+.gallery>ul>li>a
+{
+    text-decoration: none;
+    color: #809575;
+    font-size: 20px;
+    font-family: 'Pontano Sans', sans-serif;    
+}
+
+.galleryitems{
+    width: 80%;
+    min-height:300px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5%;
+    margin-bottom: 10%;    
+}
+
+.galleryitems div
+{
+    cursor: pointer;
+    display: block;
+    width: 24%;
+    height: 410px;
+    float: left;
+    margin: 0.5% 0.5%;
+}
+
+.galleryitems img
+{
+    width: 100%;
+}
+.galleryitems img:hover
+{
+    opacity: 0.7;
+}
+
+.galleryitems>div>p
+{
+   
+    margin: 0.5px;
+}
+
+/*Menu page - Click to enlarge and show the details of menu items*/
+
+.modal
+{
+    display: none;
+    position: fixed;
+    z-index: 3;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.close
+{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 70px;
+    font-weight: bold;
+    transition: 0.3s;
+    
+}
+
+.close:hover,
+.close:focus
+{
+    color: #bbb;
+    cursor: pointer;
+}
+
+#modalImg
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 30%;
+    clear: left;   
+}
+
+#caption
+{
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    clear: left;
+    font-family: 'Pontano Sans', sans-serif;   
+}
+
+/*----------------------------------------------Testimonial page's css-------------------------------------*/
+.testimonial
+{
+    width: 80%;
+    min-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    margin-bottom: 10%;
+    margin-top: 3%;
+}
+
+.testimonial div
+{
+    background-color: antiquewhite;
+    width: 16.5%;
+    height: 200px;
+    float: left;
+    margin: 0;
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;        
+}
+
+.testimonial img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.testimonial p
+{
+    color: #888383;
+    padding: 60px 10px;
+    text-align: center;
+}
+
+/*--------------------------------------------Contact us page's css------------------------------------------------------*/
+.contact
+{
+    width: 80%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Pontano Sans', sans-serif;  
+}
+
+.contactBlock
+{
+    width: 50%;
+    height: 400px;
+    float: left;
+}
+
+/*Hours and location styling*/
+.info
+{
+    padding: 26px 26px;
+    color: #898c90;
+    font-size: 18px;
+    background-color: #32323b;
+}
+
+.infoTitle, .formTitle
+{
+    color:#e6bd64;
+    font-size: 20px;
+}
+
+/*Imgs styling*/
+.contactBlock img
+{
+    width: 100%;
+    height: 100%;
+
+}
+
+/*Form styling*/
+
+.formBlock
+{
+    padding: 26px 26px;
+    color: #32323b;
+    background-color: antiquewhite;
+    margin: 0px 0px;
+    
+    
+}
+
+.formTitle
+{
+    margin-bottom: 5px;
+}
+
+
+.formBlock input,.formBlock select
+{
+    color: #32323b;
+    padding: 2px 2px;
+    width: 150px;
+
+}
+
+.float
+{
+    float: left;
+    margin-right: 60px;
+    margin-bottom: 8px;
+}
+
+.clear
+{
+    clear: left;
+}
+
+.select
+{
+    width: 150px;
+    height: 28px;
+}
+
+textarea
+{
+    width: 80%;
+    height: 150px;
+    margin-top: 0.5%;
+}
+
+.send
+{
+    width: 100px;
+    height: 23px;
+    background-color: transparent;
+    color: #32323b;
+    border: solid 1px #32323b;;
+    margin-top: 2%;
+    transition: color 0.3s ease,background-color 0.3s ease;
+    
+}
+
+.send:hover
+{
+    background-color: #32323b;
+    color: white;
+}
+
+/*Form validation*/
+.hide
+{
+    vertical-align: top;
+    visibility: hidden;
+
+}
+
+.show
+{
+    color:#dd4d61;
+    vertical-align: top;
+    visibility: visible;
+}
+
+/*Google map*/
+#map
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:  2px;
+    margin-bottom: 10%;
+    width: 1210px;
+    height: 400px;
+}
+
+/*----------------------------------------Media query-----------------------------------------*/
+/*Navigation bar on smallscreen for all pages*/
+@media screen and (max-width:800px)
+{
+    .logobox,.navbox
+    {
+        display: none;
+    }
+    .navboxSM
+    {
+        display: block;
+    }
+}
+
+@media screen and (max-width:460px)
+{
+    .logoSM
+    {
+        font-size: 40px;
+        top: 15px;
+    }
+}
+
+@media screen and (max-width:350px)
+{
+    .logoSM
+    {
+        width: 80%;
+        font-size: 33px;
+        top: 20px;
+        line-height: 33px;
+    }
+}
+
+/*Navigation bar on desktop for all pages*/
+@media screen and (min-width:800px)
+{
+   .navboxSM
+    {
+        display: none;
+    }
+    
+    #expandNav
+    {
+        display: none;
+    }
+    
+    .logobox,.navbox
+    {
+        display: block;
+    }
+}
+
+/*Index page*/
+@media screen and (max-width:1060px)
+{
+    .col2
+    {
+        width: 100%;
+    }
+    
+    .smallScreen
+    {
+        display: none;
+    }
+}
+
+/*Menu, Spring/Scoop/Bar Series pages*/
+@media screen and (max-width:1280px)
+{
+    .galleryitems div
+    {
+        width: 24%;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:1100px)
+{
+    .galleryitems div
+    {
+        width: 32%;
+        height: 380px;
+    }
+}
+
+@media screen and (max-width:900px)
+{
+    .galleryitems div
+    {
+        width: 48%;
+        height: 470px;
+    }
+}
+
+@media screen and (max-width:700px)
+{
+    .galleryitems div
+    {
+        width: 70%;
+        height: 530px;
+    }
+}
+
+@media screen and (max-width:600px)
+{
+    .galleryitems div
+    {
+        width: 70%;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width:400px)
+{
+    .galleryitems div
+    {
+        width: 90%;
+        height: 400px;
+    }  
+}
+
+/*Testimonial page*/
+@media screen and (max-width:1350px)
+{
+    .testimonial div
+    {
+        width: 16%;
+        height: 160px;
+    }
+}
+
+@media screen and (max-width:1150px)
+{
+    .testimonial div
+    {
+        width: 25%;
+        height: 220px;
+    }
+}
+
+@media screen and (max-width:900px)
+{
+    .testimonial div
+    {
+        width: 30%;
+        height: 220px;
+    }
+}
+
+@media screen and (max-width:800px)
+{
+    .testimonial div
+    {
+        width: 30%;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width:600px)
+{
+    .testimonial div
+    {
+        width: 50%;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:400px)
+{
+    .testimonial div
+    {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:300px)
+{
+    .testimonial div
+    {
+        width: 100%;
+        height: 240px;
+    }
+}
+
+/*Contact us page*/
+@media screen and (max-width:1250px)
+{
+    .contactBlock
+    {
+        width: 50%;
+        min-height: 500px;
+    }
+}
+
+@media screen and (max-width:1170px)
+{
+    .contactBlock
+    {
+        width: 100%;
+    }
+    
+    .mobile
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px)
+{
+    .contactBlock
+    {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .mobile,.shop,#map
+    {
+        display: none;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
